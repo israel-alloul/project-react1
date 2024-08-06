@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import Keyboard from './components/KeyBoard';
 
-function App() {
+const App = () => {
+  const [text, setText] = useState('');
+  
+
+
+  const handleKeyPress = (key) => {
+    setText(text + key);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>מקלדת וירטואלית</h1>
+      <textarea value={text} readOnly />
+      <Keyboard onKeyPress={handleKeyPress} />
     </div>
   );
-}
+};
 
 export default App;
+
+
+
+
+
+
+
+// import logo from './logo.svg';
+// import './App.css';
+
+
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+        
+//        <h1>55555</h1>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
