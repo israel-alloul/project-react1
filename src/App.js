@@ -11,11 +11,16 @@ const App = () => {
     setText(text + key);
   };
 
+  const handleBackspace = () => {
+    setText(text.slice(0, -1));
+  };
+
+
   return (
     <div className="App">
       <h1>מקלדת וירטואלית</h1>
       <textarea value={text} readOnly />
-      <Keyboard onKeyPress={handleKeyPress} />
+      <Keyboard onKeyPress={handleKeyPress} onBackspace={handleBackspace}/>
     </div>
   );
 };
