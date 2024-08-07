@@ -30,9 +30,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>מקלדת וירטואלית</h1>
+      <h1>My Virtual Keyboard</h1>
       <div className="screen">
-        <div
+        <div 
           className="textarea"
           style={{ fontSize: `${fontSize}px`, color: color }}
         >
