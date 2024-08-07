@@ -1,6 +1,18 @@
+/* .App {
+  text-align: center;
+} */
 .App {
   text-align: center;
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -15,7 +27,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,10 +49,37 @@
   }
 }
 
+.textarea {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+body{
+  background-color: #282c34;
+}
 
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 200px;
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
 
-
-/* Keyboard.css */
 .keyboard {
   display: flex;
   flex-direction: column;
@@ -62,8 +101,26 @@
   font-size: 16px;
   cursor: pointer;
   outline: none;
+  transition: background-color 0.3s ease;
 }
 
 .key-button:hover {
   background-color: #e0e0e0;
+}
+
+.key-button:active {
+  background-color: #d0d0d0;
+}
+
+.keyboard .special-key {
+  background-color: #d9edf7;
+  color: #31708f;
+}
+
+.keyboard .special-key:hover {
+  background-color: #c4e3f3;
+}
+
+.keyboard .special-key:active {
+  background-color: #a9d3e6;
 }

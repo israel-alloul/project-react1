@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 
-const Keyboard = ({ onKeyPress , onBackspace }) => {
+const Keyboard = ({ onKeyPress , onBackspace ,clear}) => {
   const keys = [
     ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
     ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
@@ -60,6 +60,8 @@ const arr=[keys,keys2,keys4,keys3]
       ))}
        <button className="key-button" onClick={onBackspace}>Backspace</button>
       <button className="key-button" onClick={setlang}>לשינוי שפה </button>
+      <button className="key-button" onClick={clear}> Clear </button>
+      
     </div>
   );
 };
