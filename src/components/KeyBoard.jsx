@@ -36,6 +36,7 @@ const keys4 = [
 const arr=[keys,keys2,keys4,keys3]
       const [language, setlanguage] = useState(arr[3]);
       const [count, setCount] = useState(0);
+      
       const setlang = () => {
         setCount((prevCount) => (prevCount + 1) % 4);
         setlanguage(arr[count]);
