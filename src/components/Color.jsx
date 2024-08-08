@@ -1,31 +1,43 @@
-import React from 'react'
-import { useState } from 'react';
+import React from "react";
 
 const Color = (props) => {
-
-    const ChangeColorGreen = () => {
-        props.setColor("green");
-      };
-      const ChangeColorBlack = () => {
-        props.setColor("black");
-      };
-      const ChangeColorRed = () => {
-        props.setColor("red");
-      };
-      const ChangeColorBlue = () => {
-        props.setColor("blue");
-      };
-
+  const ChangeColorGreen = () => {
+    props.setColor("green");
+  };
+  const ChangeColorBlack = () => {
+    props.setColor("black");
+  };
+  const ChangeColorRed = () => {
+    props.setColor("red");
+  };
+  const ChangeColorBlue = () => {
+    props.setColor("blue");
+  };
 
   return (
-    <div>Color:
-         <button className="key-button" onClick={ChangeColorBlack}> Black </button>
-         <button className="key-button" onClick={ChangeColorGreen}> Green </button>
-         <button className="key-button" onClick={ChangeColorRed}> Red</button>
-         <button className="key-button" onClick={ChangeColorBlue}> Blue </button>
-      
+    <div>
+      <div>
+        <button className="key-button" id="black" onClick={ChangeColorBlack}>
+          Black
+        </button>
+      </div>
+      <div>
+        <button className="key-button" id="green" onClick={ChangeColorGreen}>
+          Green
+        </button>
+      </div>
+      <div>
+        <button className="key-button" id="red" onClick={ChangeColorRed}>
+          Red
+        </button>
+      </div>
+      <div>
+        <button className="key-button" id="blue" onClick={ChangeColorBlue}>
+          Blue
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Color
+export default Color;

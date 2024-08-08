@@ -31,6 +31,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>My Virtual Keyboard</h1>
+      <div className="main">
       <div className="screen">
         <div 
           className="textarea"
@@ -40,16 +41,21 @@ const App = () => {
         </div>
       </div>
       <div>
+        <Color color={color} setColor={setColor} />
+        <div id="s">
         <button onClick={decreaseFontSize}>-</button>
         <span> {fontSize}px </span>
         <button onClick={increaseFontSize}>+</button>
+        </div>
       </div>
-      <Color color={color} setColor={setColor} />
+      </div>
+      <div className="keyboard2">
       <Keyboard
         onKeyPress={handleKeyPress}
         onBackspace={handleBackspace}
         clear={clear}
       />
+      </div>
     </div>
   );
 };
